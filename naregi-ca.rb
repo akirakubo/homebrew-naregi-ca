@@ -13,7 +13,8 @@ class NaregiCa < Formula
     # Remove unrecognized options if warned by configure
     system "./configure", "--disable-debug",
                           "--disable-silent-rules",
-                          "--prefix=#{prefix}"
+                          "--prefix=#{prefix}",
+                          "--sbindir=#{bin}"
     # system "cmake", ".", *std_cmake_args
     system "make", "install" # if this fails, try separate make/make install steps
   end
